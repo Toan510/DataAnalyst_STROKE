@@ -9,11 +9,10 @@ from sklearn.impute import SimpleImputer
 import plotly.express as px
 import io
 
-# === Cấu hình trang ===
+
 st.set_page_config(page_title="Phân tích Nguy cơ Đột quỵ", layout="wide", initial_sidebar_state="expanded")
 st.title("Phân tích Nguy cơ Đột quỵ – Dashboard Hoàn chỉnh")
 
-# === Load dữ liệu ===
 @st.cache_data
 def load_data():
     try:
@@ -25,7 +24,6 @@ def load_data():
 
 df = load_data()
 
-# === Sidebar ===
 st.sidebar.title("Điều hướng")
 page = st.sidebar.radio("Chọn phần", [
     "Tổng quan dữ liệu",
@@ -36,9 +34,7 @@ page = st.sidebar.radio("Chọn phần", [
     "Bảng tóm tắt nguy cơ"
 ])
 
-# ===================================================================
-# 1. Tổng quan dữ liệu
-# ===================================================================
+
 if page == "Tổng quan dữ liệu":
     st.header("1. Tổng quan dữ liệu")
     st.dataframe(df.head(10), use_container_width=True)
@@ -59,10 +55,7 @@ if page == "Tổng quan dữ liệu":
 
     st.subheader("Thống kê mô tả")
     st.dataframe(df.describe().round(2), use_container_width=True)
-
-# ===================================================================
-# 2. Tiền xử lý dữ liệu
-# ===================================================================
+    
 elif page == "Tiền xử lý dữ liệu":
     st.header("2. Tiền xử lý dữ liệu")
     df_clean = df.copy()
@@ -74,9 +67,6 @@ elif page == "Tiền xử lý dữ liệu":
     csv = df_clean.to_csv(index=False).encode()
     st.download_button("Tải file CSV đã làm sạch", data=csv, file_name="stroke_cleaned.csv", mime="text/csv")
 
-# ===================================================================
-# 3. Phân tích khám phá (EDA) – ĐÃ SỬA LỖI BAR CHART
-# ===================================================================
 elif page == "Phân tích khám phá (EDA)":
     st.header("3. Phân tích khám phá dữ liệu (EDA)")
 
@@ -109,9 +99,6 @@ elif page == "Phân tích khám phá (EDA)":
                     title="Tương quan giữa các biến")
     st.plotly_chart(fig, use_container_width=True)
 
-# ===================================================================
-# 4. Phân cụm bệnh nhân – ĐÃ SỬA LỖI NaN TRONG CỤM
-# ===================================================================
 elif page == "Phân cụm bệnh nhân":
     st.header("4. Phân cụm bệnh nhân (K-Means)")
 
@@ -169,9 +156,6 @@ elif page == "Phân cụm bệnh nhân":
                       color_discrete_sequence=px.colors.qualitative.Set1)
     st.plotly_chart(fig2, use_container_width=True)
 
-# ===================================================================
-# 5. Trực quan hóa nâng cao
-# ===================================================================
 elif page == "Trực quan hóa nâng cao":
     st.header("5. Trực quan hóa nâng cao")
 
@@ -189,9 +173,6 @@ elif page == "Trực quan hóa nâng cao":
                      title=f"{col.replace('_', ' ')} theo Đột quỵ")
         st.plotly_chart(fig, use_container_width=True)
 
-# ===================================================================
-# 6. Bảng tóm tắt nguy cơ
-# ===================================================================
 elif page == "Bảng tóm tắt nguy cơ":
     st.header("6. Bảng tóm tắt nguy cơ đột quỵ")
 
