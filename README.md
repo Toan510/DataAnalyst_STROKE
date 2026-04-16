@@ -1,6 +1,6 @@
 # SGU25 Data Analytics - Phân Tích Dữ Liệu Đột Quỵ
 
-## Mục Lục
+## Cấu trúc thư mục
 
 - [Giới Thiệu](#giới-thiệu)
 - [Cấu Trúc Dự Án](#cấu-trúc-dự-án)
@@ -106,33 +106,5 @@ Sau đó, mở các file notebook theo thứ tự:
 
 **Từ thư mục gốc dự án:**
 ```bash
-streamlit run PhanTichDuLieu_DotQuy/app/dashboard.py
+streamlit run DOAN_CUOIKY/app/dashboard.py
 ```
-
-Dashboard sẽ mở tại `http://localhost:8501`
-
-## Tập Dữ Liệu
-
-**Tên:** Healthcare Dataset - Stroke Data
-
-**Nguồn:** `data/raw/healthcare-dataset-stroke-data.csv`
-
-**Mô tả:**
-- Tập dữ liệu y tế chứa thông tin về bệnh nhân
-- Các thuộc tính bao gồm: tuổi, giới tính, bệnh tim, tình trạng huyết áp, BMI, tình trạng hôn nhân, công việc, vùng cư trú, v.v.
-- Biến mục tiêu: `stroke` (có/không có đột quỵ)
-
-## Công Nghệ Sử Dụng
-
-| Thư Viện | Mục Đích |
-|---------|---------|
-| **pandas** | Xử lý và phân tích dữ liệu |
-| **numpy** | Tính toán số học |
-| **matplotlib, seaborn** | Trực quan hóa dữ liệu |
-| **scikit-learn** | Machine learning, clustering, classification |
-| **streamlit** | Xây dựng giao diện web tương tác |
-| **jupyter** | Phát triển và trình bày code |
-
-## Liên Hệ & Thông Tin Thêm
-
-Cho các câu hỏi hoặc góp ý, vui lòng liên hệ với nhóm dự án.
