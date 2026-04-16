@@ -1,7 +1,0 @@
-Metric,Value,Comparison
-Dataset Size,768,768 samples
-Diabetes Prevalence,34.9%,34.9%
-Model Accuracy,72.4%,76% (ADAP)
-Sensitivity,55.2%,76%
-Specificity,81.6%,76%
-ROC AUC,0.817,N/A

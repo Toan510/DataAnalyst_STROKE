@@ -1,9 +1,0 @@
-Metric,Value,vs Paper2,Status
-Dataset Size,768 samples,768 samples,✅ Complete
-Diabetes Prevalence,34.9%,34.9%,✅ Complete
-WHO Diabetes,0 (0.0%),Diagnostic,⚠ No cases
-NDDG NIDDM,0 (0.0%),Diagnostic,⚠ No cases
-NN Accuracy,72.4%,72.4% vs 76%,✅ BEST
-Sensitivity,55.2%,55.2% vs 76%,✅ Good
-Specificity,81.6%,81.6% vs 76%,✅ Excellent
-ROC AUC,0.817,N/A,✅ Excellent
