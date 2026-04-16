@@ -1,6 +1,6 @@
 # sgu25_data_analytics
 
-## Cấu trúc thư mục đề xuất cho báo cáo
+## Cấu trúc thư mục
 
 ```text
 DOAN_CUOIKY/
